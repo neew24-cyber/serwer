@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="https://kit.fontawesome.com/402fb4d8bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/keyframes.min.css">
+    <link rel="stylesheet" href="css/page.min.css">
+    <link rel="stylesheet" href="css/donation.min.css">
+    <link rel="stylesheet" href="css/media.min.css">
+
+    <title>Shinemaker - Donation</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+
+
+    <nav>
+        <ul class="nav__main">
+            <li><img src="images/logo.png"></li>
+            
+            <li><a href="/"><img src="images/ui/3.png">Main</a></li>
+            <li><a href="/"><img src="images/ui/3.png">About</a></li>
+            <li class="active"><a href="/"><img src="images/ui/3.png">Donation</a></li>
+            <li><a href="/"><img src="images/ui/3.png">Support</a></li>
+            <li><a href="/"><img src="images/ui/3.png">Files</a></li>
+            <li><a href="/"><img src="images/ui/3.png">Account</a></li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="/" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+
+            <li>
+                <a class="secon_btn" href="/" target="_blank">
+                    <div class="decoration"><img src="images/ui/2.png"><img src="images/ui/2-1.png"></div>
+                    <span><i class="fa-solid fa-user"></i></span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="mobile"><i class="fa-solid fa-bars"></i><i class="fa-solid fa-xmark"></i></div>
+    </nav>
+    
+
+
+    <div class="page">
+    
+        <div class="page__title"><img src="images/ui/3.png">Donation</div>
+
+        <div class="donate page_content">
+            <div class="donate_decoration page_decoration"><img src="images/ui/6.png"><img src="images/ui/6.png"><img src="images/ui/6.png"><img src="images/ui/6.png"></div>
+
+
+            <div class="donate_calculation">
+                        
+                <input type="radio" name="type_id" value="603" data-type="char" data-message="" data-long-name="Yen Coin" data-price="1.00000" data-short-name="USD" data-price-count="100" data-ingame-short-name="Yen Coin" style="display: none;" checked />
+            
+                <form>
+                    <p>Specify name of the character</p>
+
+                    <div>
+                        <span class="donate_decoration"><img src="images/ui/6.png"><img src="images/ui/6.png"><img src="images/ui/6.png"><img src="images/ui/6.png"></span>
+                        <span><i class="fa-solid fa-user"></i></span>
+                        <input type="text" id="recipient" name="recipient" placeholder="MegaMag">
+                    </div>
+
+                    <p>Specify quantity</p>
+                    
+                    <div>
+                        <span class="donate_decoration"><img src="images/ui/6.png"><img src="images/ui/6.png"><img src="images/ui/6.png"><img src="images/ui/6.png"></span>
+                        <span>USD</span> 
+                        <input type="number" min="10" max="10000" id="coin" name="sum" value="50" onchange="changeSum($(this).val(),false);" onkeyup="changeSum($(this).val(),false);">
+                        <span for="coin" id="bonus_sum">+0 Bonuses</span>         
+                    </div>                                                     
+                </form>
+
+                    
+                <div class="range">
+                    <input type="text" id="sum_slider" data-grid="true">
+                </div>
+    
+                    
+                <div id="calculation_board">
+
+                    <div>
+                        <span id="valute_GAME"></span>
+                        <span id="sum_GAME">0</span>
+                    </div>
+    
+                    <div>
+                        <span>USD</span>
+                        <span id="sum_USD">0</span>
+                    </div>
+    
+                    <div>
+                        <span>RUB</span>
+                        <span id="sum_RUB">0</span>
+                    </div>
+    
+                    <div>
+                        <span>EUR</span>
+                        <span id="sum_EUR">0</span>
+                    </div>
+    
+                    <div>
+                        <span>UAH</span>
+                        <span id="sum_UAH">0</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="donate_type">
+
+                <p>Choose the payment type:</p>
+                    
+                <div>
+                    <a data-open-gwps="primepayments|paypalych" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/visa.svg"/>
+                    </a>
+    
+                    <a data-open-gwps="primepayments|paypalych" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/mastercard.svg"/>
+                    </a>
+    
+                    <a data-open-gwps="primepayments|enot" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/youmoney.svg"/>
+                    </a>
+    
+                    <a data-open-gwps="primepayments|paypalych" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/qiwi.svg"/>
+                    </a>
+    
+                    <a data-open-gwps="capitalist|cryptocurrency" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/usdt.svg"/>
+                    </a>
+    
+                    <a data-open-gwps="freekassa" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/visaua.svg"/>
+                    </a>
+    
+    
+                    <a data-open-gwps="primepayments|paypalych|freekassa" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/visakzt.svg"/>
+                    </a>
+    
+    
+                    <a data-open-gwps="primepayments|paypalych|paypal" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/visainternational.svg"/>
+                    </a>
+    
+    
+                    <a data-open-gwps="paypal" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/paypal.svg"/>
+                    </a>
+    
+    
+                    <a data-open-gwps="capitalist|cryptocurrency" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/bitcoin.svg"/>
+                    </a>
+    
+    
+                    <a data-open-gwps="enot" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/perfectmoney.svg"/>
+                    </a>
+    
+                    <a data-open-gwps="cryptocurrency|enot" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/etherium.svg"/>
+                    </a>
+    
+    
+                    <a data-open-gwps="cryptocurrency|primepayments|enot" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/litecoin.svg"/>
+                    </a>
+    
+    
+                    <a data-open-gwps="cryptocurrency|enot" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/dash.svg"/>
+                    </a>
+    
+    
+                    <a data-open-gwps="cryptocurrency|primepayments|enot" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        <img src="images/donate/2/tron.svg"/>
+                    </a>
+    
+                    <a data-open-gwps="primepayments|paypalych|enot|capitalist|paypal|cryptocurrency|freekassa" data-open-gwps-group="ps" data-gwps-scrollto="._systems">
+                        All Systems
+                    </a>
+                </div>
+
+            </div>
+            
+
+
+            <div class="donate_method _systems">   
+                
+                <p>Choose the payment method:</p>
+                    
+                <div>
+                    <label data-gwps="primepayments" data-gwps-group="ps">
+                        <input id="primepayments" type="radio" name="payment_method" value="primepayments" checked="checked" data-gwps-input/>
+                        <img src="images/donate/2/primepayments.png"/>
+                        
+                        <div class="label_bg"></div>
+                    </label>
+    
+    
+                    <label data-gwps="paypalych" data-gwps-group="ps">
+                        <input id="paypalych" type="radio" name="payment_method" value="paypalych" data-gwps-input/>
+                        <img src="images/donate/2/paypalych.png"/>       
+                        <div class="label_bg"></div>                 
+                    </label>
+    
+    
+                    <label data-gwps="enot" data-gwps-group="ps">
+                        <input id="enot" type="radio" name="payment_method" value="enot" data-gwps-input/>
+                        <img src="images/donate/2/enot.png"/>     
+                        <div class="label_bg"></div>                       
+                    </label>
+    
+    
+                    <label data-gwps="capitalist" data-gwps-group="ps">
+                        <input id="capitalist" type="radio" name="payment_method" value="capitalist" data-gwps-input/>
+                        <img src="images/donate/2/capitalist.png" />   
+                        <div class="label_bg"></div>                         
+                    </label>
+    
+    
+                    <label data-gwps="freekassa" data-gwps-group="ps">
+                        <input id="freekassa" type="radio" name="payment_method" value="freekassa" data-gwps-input/>
+                        <img src="images/donate/2/freekassa.png"/>     
+                        <div class="label_bg"></div>                       
+                    </label>
+    
+    
+                    <label data-gwps="paypal" data-gwps-group="ps">
+                        <input type="radio" name="payment_method" value="false" data-gwps-input/>
+                        <img src="images/donate/2/paypal.png"/>       
+                        <div class="label_bg"></div>                     
+                    </label>
+    
+    
+    
+                    <label data-gwps="cryptocurrency" data-gwps-group="ps">
+                        <input type="radio" name="payment_method" value="false" data-gwps-input/>
+                        <img src="images/donate/2/cryptocurrency.png" alt="primepayments"/>     
+                        <div class="label_bg"></div>                       
+                    </label>
+                </div>
+
+            </div>
+
+
+            <button class="donate__pay main_btn">
+                <div class="decoration"><img src="images/ui/2.png"><img src="images/ui/2-1.png"></div>
+                <span>Pay</span>
+            </button>
+
+        </div>
+    </div>
+
+
+
+    
+
+
+
+    <footer>
+        <div class="line"><img src="images/ui/5.png"></div>
+
+        <section class="start" id="start">
+            
+            <div class="start__title"><h1>How to Start?</h1></div>
+    
+            <div class="start__decoration">
+            </div>
+    
+            <div class="start__thumbs">
+                <div class="swiper-wrapper">
+    
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="images/skills/1.jpg">
+                        </div>
+                       
+                        <span class="circle">
+                            <span class="circle-1">
+                                <span></span>
+                            </span>
+    
+                            <span class="circle-2">
+                                <span></span>
+                            </span>
+                        </span>
+    
+                        <p>Step [1]</p>
+                    </div>
+    
+    
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="images/skills/2.jpg">
+                        </div>
+                       
+                        <span class="circle">
+                            <span class="circle-1">
+                                <span></span>
+                            </span>
+    
+                            <span class="circle-2">
+                                <span></span>
+                            </span>
+                        </span>
+    
+                        <p>Step [2]</p>
+                    </div>
+    
+    
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="images/skills/3.jpg">
+                        </div>
+    
+                        <span class="circle">
+                            <span class="circle-1">
+                                <span></span>
+                            </span>
+    
+                            <span class="circle-2">
+                                <span></span>
+                            </span>
+                        </span>
+    
+                        <p>Step [3]</p>
+                    </div>
+    
+    
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="images/skills/4.jpg">
+                        </div>
+                       
+                        <span class="circle">
+                            <span class="circle-1">
+                                <span></span>
+                            </span>
+    
+                            <span class="circle-2">
+                                <span></span>
+                            </span>
+                        </span> 
+    
+                        <p>Step [4]</p>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="start__video">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h1><span>Step 1:</span>  Create your Account</h1>
+                        
+                        <a href="/" class="main_btn">
+                            <div class="decoration"><img src="images/ui/2.png"><img src="images/ui/2-1.png"></div>
+                            <span>Create</span>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <h1><span>Step 2:</span>  Download The Game</h1>
+                        
+                        <a href="/" class="main_btn">
+                            <div class="decoration"><img src="images/ui/2.png"><img src="images/ui/2-1.png"></div>
+                            <span>Download</span>
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <h1><span>Step 3:</span>  Join our Discord</h1>
+                        
+                        <a href="/" class="main_btn">
+                            <div class="decoration"><img src="images/ui/2.png"><img src="images/ui/2-1.png"></div>
+                            <span>Join</span>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <h1><span>Step 4:</span>  Start Playing!</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <div class="right">
+            <img src="images/logo.png">
+            <ul>
+                <li><a href="/">Terms of Service</a></li>
+                <li><a href="/">Privacy Policy</a></li>
+                <li><a href="/">Refund Policy</a></li>
+            </ul>
+            <span>This is a test server for demonstration purposes only. All rights reseverd to their respective owners.</span>
+        </div>
+    </footer>
+
+   
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/menu.js"></script>
+
+    <!--code by get-web.site-->
+    <script src="js/donate.js"></script>
+    
+</body>
+</html>
