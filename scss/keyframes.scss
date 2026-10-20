@@ -1,0 +1,56 @@
+@keyframes circle {
+    0% {
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+
+@keyframes circle2 {
+    0% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+        transform: rotate(180deg);
+    }
+
+    51% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+
+
+
+@keyframes circle--animate--reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes circle--animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
